@@ -198,20 +198,83 @@ body {
     height: auto;
     margin: 0.5%;
 }
-/*
-<div class="carousel-item_active">
-                <img src="imagens\casa1.jpg" class="d-block w-100" alt="Imagem 1">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Realizando Sonhos!</h5>
-                    <p>A sua casa do jeito que você sempre sonhou!</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imagens\leque.jpg" class="d-block w-100" alt="Imagem 2">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Colorindo vidas!</h5>
-                    <p>Explore infinitas possibilidades de cores para a sua vida!</p>
-                </div>
-            </div>
+.imgproduto{
+    width: 600px;
+    justify-content: left;
+    margin-top: 20%;
+    margin-left: 10%;
+}
 
-*/
+.fotoproduto{
+    text-align: left; /*Alinha o texto a esquerda*/
+    position: fixed; /*Fixa a posição do menu sempre na mesma parte da tela*/
+    top: 0; /*Define a distância do topo do elemento em 0*/
+    left: 0; /*Define a distância da base do elemento em 0*/
+    width: 100%;
+    
+}
+
+.informacoes{
+    justify-content: left; 
+    text-align: left; /*Alinha o texto ao centro*/
+    width: 60%;
+    margin-left: 50%; /*Define uma margem ao lado esquerdo em 40%*/
+    border-radius: 10px; /*Arredonda as bordinhas*/
+    margin-top: 20px; /*Define uma margem na parte de cima*/
+}
+
+.beneficios{
+    background-color: rgb(221, 224, 228);
+    padding: 10px;
+    width: 20%;
+}
+
+input[type="button"]{
+    margin: 10px;
+    padding: 5px;
+}
+
+.tamanho{
+    margin-top:20px;
+}
+
+.infoProduto{
+    margin-top: 20px;
+}
+.cor{
+    margin-top: 20px;
+}
+#botaobranco{
+    background-color: aliceblue;
+    color: black;
+    width: 100px;
+    padding: 5px;
+}
+
+#botaopreto{
+    background-color: black;
+    color:aliceblue;
+    width: 100px;
+    padding: 5px;
+}
+
+#botaovermelho{
+    background-color: red;
+    color: aliceblue;
+    width: 100px;
+    padding: 5px;
+}
+
+#botaotm{
+    width: 100px;
+    padding: 5px;
+}
+
+#botaoComprar{
+    background-color: rgb(192, 83, 4);
+    color: black;
+    align-items: center;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
