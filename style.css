@@ -4,12 +4,14 @@ body {
     box-sizing: border-box;
     font-weight: bold;
     background-color:rgba(248, 244, 220, 0.973);
+    font-family: Arial, Helvetica, sans-serif;
 }
 h2, p, a{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-weight: bold;
+    color:black;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
@@ -21,10 +23,6 @@ h1 {
     font-family: 'Roboto', sans-serif;
     text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
-}
-
-body {
-    font-family: Arial, sans-serif;
 }
 
 .promo-container {
@@ -188,93 +186,169 @@ body {
 .carousel-next {
     right: 10px;
 }
-.imgBanner{
+.imgBanner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
+    margin: 20px 0; 
 }
 
-.casa1, .leque{
-    width: 80%;
-    height: auto;
-    margin: 0.5%;
-}
-.imgproduto{
-    width: 600px;
-    justify-content: left;
-    margin-top: 20%;
-    margin-left: 10%;
+.imgBanner a {
+    display: inline-block; 
+    margin: 0 10px; 
 }
 
-.fotoproduto{
-    text-align: left; /*Alinha o texto a esquerda*/
-    position: fixed; /*Fixa a posição do menu sempre na mesma parte da tela*/
-    top: 0; /*Define a distância do topo do elemento em 0*/
-    left: 0; /*Define a distância da base do elemento em 0*/
-    width: 100%;
-    
+.imgBanner img {
+    width: 700px; 
+    height: 500px; 
+    object-fit: cover; 
+    border-radius: 5px; 
 }
 
-.informacoes{
-    justify-content: left; 
-    text-align: left; /*Alinha o texto ao centro*/
-    width: 60%;
-    margin-left: 50%; /*Define uma margem ao lado esquerdo em 40%*/
-    border-radius: 10px; /*Arredonda as bordinhas*/
-    margin-top: 20px; /*Define uma margem na parte de cima*/
+
+.produtos-container {
+    margin: 20px auto;
+    max-width: 1200px; 
+    text-align: center;
 }
 
-.beneficios{
-    background-color: rgb(221, 224, 228);
-    padding: 10px;
-    width: 20%;
+.produto {
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    background: #f9f9f9; 
+    padding: 15px;
+    width: 300px; 
+    margin: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; 
+    text-align: center; 
+}
+.imgprod {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 5px; 
 }
 
-input[type="button"]{
+.produtos {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+.produto:hover {
+    transform: scale(1.05); 
+}
+.btnDetalhe{
+    width: auto;
+    padding: 5px;
+    border-color:rgb(192, 83, 4) ;
+    color:rgb(192, 83, 4);
+    font-size: 20px;
+}
+
+input[type="button"] {
     margin: 10px;
     padding: 5px;
 }
 
-.tamanho{
-    margin-top:20px;
+.fotoproduto {
+    flex: 1; /* Permite que a imagem ocupe o espaço necessário */
+    text-align: left;
 }
 
-.infoProduto{
+.imgproduto {
+    width: 100%; /* Define a largura da imagem como 100% do container */
+    max-width: 300px; /* Limita a largura máxima da imagem */
     margin-top: 20px;
 }
-.cor{
+
+form {
+    display: flex;
+    align-items: flex-start; /* Alinha a imagem e as informações no topo */
+    margin: 20px;
+    margin-left: 18%;
+    margin-top: 40px;
+}
+
+.informacoes {
+    flex: 2; /* Permite que as informações ocupem mais espaço */
+    margin-left: 20px; /* Espaçamento entre imagem e informações */
+    text-align: left;
+}
+
+.cor {
     margin-top: 20px;
 }
-#botaobranco{
+
+.infoProduto {
+    margin-top: 20px;
+}
+
+.beneficios {
+    margin: 10px 0 5px;
+    background-color: rgb(221, 224, 228);
+    padding: 10px;
+    width: 40%;
+}
+
+.tamanho {
+    margin-top: 20px;
+}
+
+#botaobranco {
     background-color: aliceblue;
     color: black;
     width: 100px;
     padding: 5px;
 }
 
-#botaopreto{
+#botaopreto {
     background-color: black;
-    color:aliceblue;
+    color: aliceblue;
     width: 100px;
     padding: 5px;
 }
 
-#botaovermelho{
+#botaovermelho {
     background-color: red;
     color: aliceblue;
     width: 100px;
     padding: 5px;
 }
 
-#botaotm{
+#botaotm {
     width: 100px;
     padding: 5px;
 }
 
-#botaoComprar{
+#botaoComprar {
     background-color: rgb(192, 83, 4);
     color: black;
-    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
     width: 300px;
     border-radius: 5px;
     border: none;
+}
+#botaoComprar:hover{
+    background-color: rgb(167, 72, 4);;
+}
+
+.developer-info {
+    background-color: rgba(235, 232, 218, 0.973);
+    padding: 20px;
+    text-align: center;
+}
+
+.developer-info p {
+    margin-bottom: 10px;
+}
+
+.developer-info a {
+    color: black;
+    text-decoration: none;
+}
+
+.developer-info a:hover {
+    text-decoration: underline;
 }
