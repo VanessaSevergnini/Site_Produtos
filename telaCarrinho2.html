@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <!--Desenvolvido por José Victor Rossa Belaver-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <title>Casa das Tintas</title>
+        <link rel="icon" href="logo.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    
+
+    </head>
+    <body>
+        <div class="promo-container">
+            <p>Promoção Especial! Até 10% de desconto em toda a linha de
+                Acrílico!</p>
+        </div>
+        <header class="header">
+            <div class="logo-container">
+                <img src="logo.png" alt="Casa das Tintas" class="logo">
+                <h1>Casa das Tintas</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Olá, o que você procura?">
+                <button>Buscar</button>
+            </div>
+            <div class="icons-container">
+                <a href="https://www.instagram.com/neytintas_/" class="icon"data-tooltip="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/neytintas/" class="icon"data-tooltip="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="cadastro.html" class="icon" data-tooltip="Minha Conta"><i class="bi bi-person"></i></a>
+                <a href="telaCarrinho.html" class="icon" data-tooltip="Carrinho"><i class="bi bi-cart"></i></a>
+            </div>
+        </header>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="#">Paredes</a></li>
+                <li><a href="#">Madeiras</a></li>
+                <li><a href="#">Metais</a></li>
+                <li><a href="#">Outras Superfícies</a></li>
+                <li><a href="#">Acessórios de Pintura</a></li>
+                <li><a href="https://loja.suvinil.com.br/leque-digital">Cores</a></li>
+                <li><a href="#">Encontre o seu Pintor</a></li>
+            </ul>
+        </nav>
+        <div class="cartCompra container">
+            <h2 class="text-center">Meu Carrinho de Compras</h2>
+            <div class="cartItem">
+                <img src="fosco.png" alt="fosco" class="imgprod">
+                <div class="itemDetalhe">
+                    <h3>Acrílico Toque Fosco</h3>
+                    <div class="form-group">
+                        <label>Forma de pagamento:</label><br>
+                        <input type="radio" name="opcao" id="pix">Pix <span class="price">1 X de R$ 175,90</span><br>
+                        <input type="radio" name="opcao" id="cartao">Cartão <span class="price">Até 5 X de R$ 35,18</span>
+                    </div>
+                    <button class="btn btn-danger">Remover</button>
+                </div>
+            </div>
+    
+            <hr>
+    
+            <div class="cartResumo">
+                <h2>Resumo da Compra</h2>
+                <div class="cartItem">
+                    <img src="fosco.png" alt="fosco" class="imgprod">
+                    <div class="itemDetalhe">
+                        <h3>Acrílico Toque Fosco</h3>
+                        <span class="preco">R$ 175,90</span>
+                    </div>
+                </div>
+    
+                <div class="total">
+                    <h2>Total: R$ 175,90</h2>
+                </div>
+                <button class="final btn btn-success">Finalizar Compra</button>
+            </div>
+        </div>
+    
+        <footer class="developer-info">
+            <p>Desenvolvido por <strong>JQV Desenvolvimento de Sites</strong></p>
+            <p>© 2024 Casa das Tintas. Todos os direitos reservados.</p>
+        </footer>  
+    </body>
+    </html>
