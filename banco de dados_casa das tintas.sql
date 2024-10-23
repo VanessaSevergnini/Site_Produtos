@@ -1,0 +1,84 @@
+CREATE TABLE produtos(
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL,
+	marca VARCHAR(50), 
+	descricao TEXT,
+	unidade VARCHAR(50),
+	preco DECIMAL(10,2) NOT NULL,
+	estoque INT DEFAULT 0,
+	categoria VARCHAR(20),
+	data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+	
+);
+
+ALTER TABLE produtos ADD COLUMN peso VARCHAR(20);
+
+CREATE OR REPLACE FUNCTION atualiza_data()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.data_atualizacao = CURRENT_TIMESTAMP;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_atualiza_data
+BEFORE UPDATE ON produtos
+FOR EACH ROW
+EXECUTE FUNCTION atualiza_data();
+
+ALTER TABLE produtos ADD COLUMN local_imagem VARCHAR(200); 
+
+CREATE TABLE marca(
+	id SERIAL PRIMARY KEY,
+	nome_marca VARCHAR(50) NOT NULL UNIQUE,
+	data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE categoria(
+	id SERIAL PRIMARY KEY,
+	nome_categoria VARCHAR(50) NOT NULL UNIQUE
+	);
+
+ALTER TABLE produtos ADD COLUMN marca_id INT;
+ALTER TABLE produtos ADD COLUMN categoria_id INT;
+
+ALTER TABLE produtos
+    ADD CONSTRAINT fk_marca
+    FOREIGN KEY (marca_id) REFERENCES marca(id) ON DELETE SET NULL;
+
+ALTER TABLE produtos
+    ADD CONSTRAINT fk_categoria
+    FOREIGN KEY (categoria_id) REFERENCES categoria(id) ON DELETE SET NULL;
+
+CREATE TABLE usuarios(
+	id SERIAL PRIMARY KEY,
+	nome_completo VARCHAR(100) NOT NULL,
+	cpf VARCHAR(11) NOT NULL UNIQUE,
+	email VARCHAR(100) NOT NULL UNIQUE,
+	senha VARCHAR(100) NOT NULL,
+	tipo_usuario VARCHAR(100),
+	data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	ativo BOOLEAN DEFAULT TRUE
+);
+
+CREATE TABLE clientes(
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(100) NOT NULL,
+	cpf VARCHAR(11) NOT NULL UNIQUE,
+	rua VARCHAR(255),
+	numero_end VARCHAR(10),
+	complemento VARCHAR(100),
+	bairro VARCHAR(100),
+	cep VARCHAR(8),
+	cidade VARCHAR(20),
+	estado VARCHAR(30),
+	tipo_end VARCHAR(50),
+	telefone INT,
+	email VARCHAR(100),
+	data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+SELECT * from produtos
